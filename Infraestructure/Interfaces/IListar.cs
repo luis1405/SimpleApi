@@ -8,7 +8,7 @@ namespace Infraestructure.Interfaces
 {
     public interface IListar<TEntidad,TEntidadID>
     {
-        List<TEntidad> Listar();
-        TEntidad SeleccionarPorID(TEntidadID entidadID);
+        Task<List<TEntidad>> Listar();
+        Task<TEntidad> SeleccionarPorID(TEntidadID entidadID);
     }
 }

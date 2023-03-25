@@ -8,6 +8,6 @@ namespace Infraestructure.Interfaces
 {
     public interface IAgregar<TEntidad>
     {
-        TEntidad Agregar(TEntidad entidad);
+        Task<int> Agregar(TEntidad entidad);
     }
 }

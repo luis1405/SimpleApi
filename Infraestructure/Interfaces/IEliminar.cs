@@ -8,6 +8,6 @@ namespace Infraestructure.Interfaces
 {
     public interface IEliminar<TEntidadID>
     {
-        void Eliminar(TEntidadID entidadID);
+        Task<int> Eliminar(TEntidadID entidadID);
     }
 }

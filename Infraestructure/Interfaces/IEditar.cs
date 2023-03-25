@@ -8,6 +8,6 @@ namespace Infraestructure.Interfaces
 {
     public interface IEditar<TEntidad>
     {
-        void Editar(TEntidad entidad);
+        Task<int> Editar(TEntidad entidad);
     }
 }
