@@ -39,7 +39,7 @@ namespace Api.Controllers
 
         // POST: HumanoController/Create
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        //[ValidateAntiForgeryToken]
         public ActionResult Create(HumanoDTO humano)
         {
             try
@@ -55,7 +55,7 @@ namespace Api.Controllers
 
         // POST: HumanoController/Edit/5
         [HttpPut]
-        [ValidateAntiForgeryToken]
+        //[ValidateAntiForgeryToken]
         public ActionResult Edit(HumanoDTO humano)
         {
             try
