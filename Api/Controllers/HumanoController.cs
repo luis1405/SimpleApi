@@ -7,7 +7,10 @@ using Application.DTOs;
 
 namespace Api.Controllers
 {
-    public class HumanoController : Controller
+    [ApiController]
+    [Route("api/[controller]/[action]")]
+    [Produces("application/json")]
+    public class HumanoController : ControllerBase
     {
         private readonly IHumanoRepository _humanoRepository;
 
@@ -15,19 +18,19 @@ namespace Api.Controllers
         {
             _humanoRepository = humanoRepository;
         }
-
+        [HttpGet]
         // GET: HumanoController
         public async Task<ActionResult<List<HumanoDTO>>> Index()
         {
             return await _humanoRepository.Listar();
         }
-
+        [HttpGet("{id}")]
         // GET: HumanoController/Details/5
         public async Task<ActionResult<HumanoDTO>> Details(int id)
         {
             return await _humanoRepository.SeleccionarPorID(id);
         }
-
+        [HttpGet]
         // GET: HumanoController/Create
         public ActionResult Create()
         {
