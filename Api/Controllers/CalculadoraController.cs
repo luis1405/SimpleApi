@@ -3,14 +3,16 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Api.Controllers
 {
-    public class CalculadoraController : Controller
+    [ApiController]
+    [Route("api/[controller]/[action]")]
+    public class CalculadoraController : ControllerBase
     {
-        [HttpGet("{valor1}{valor2}{valor3}")]
+        [HttpGet("{valor1}/{valor2}/{valor3}")]
         public int GetSuma(int valor1, int valor2, int valor3)
         {
             return Sumar(valor1, valor2, valor3);
         }
-        [HttpPost("{valor1}{valor2}{valor3}")]
+        [HttpPost("{valor1}/{valor2}/{valor3}")]
         public int PostSuma(int valor1, int valor2, int valor3)
         {
             return Sumar(valor1, valor2, valor3);
