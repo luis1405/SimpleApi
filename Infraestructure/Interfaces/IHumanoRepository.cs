@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Infraestructure.Interfaces
 {
-    interface IHumanoRepository : IRepositorioGenerico<HumanoDTO,int>
+    public interface IHumanoRepository : IRepositorioGenerico<HumanoDTO,int>
     {
     }
 }

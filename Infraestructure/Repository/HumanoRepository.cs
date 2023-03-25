@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Infraestructure.Repository
 {
-    internal class HumanoRepository : IHumanoRepository
+    public class HumanoRepository : IHumanoRepository
     {
         private readonly AppDbContext _appDbContext;
         public HumanoRepository(AppDbContext appDbContext)
